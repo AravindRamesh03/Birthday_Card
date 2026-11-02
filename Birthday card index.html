@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Birthday Queen · Birthday Card</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#fff4f8;--fg:#3a1230;--mut:#8a5a78;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10060e;--fg:#fde6f0;--mut:#bb94a8}}
+:root[data-theme="dark"]{--bg:#10060e;--fg:#fde6f0;--mut:#bb94a8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.4 Inter,system-ui,sans-serif;min-height:100vh}
+.w{max-width:420px;margin:0 auto;padding:20px 16px 36px}
+.sf{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+.brand{text-align:center;color:var(--mut);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+.c{background:#fffafc;color:#3a1230;border-radius:26px;padding:22px 20px;box-shadow:0 10px 40px #e0407f33}
+.c h2{text-align:center;font-size:22px;margin:0 0 10px}
+.c p.s{text-align:center;color:#7d5a70;margin:0 0 8px;font-size:14px}
+input{width:100%;padding:13px;border:1.5px solid #ecc9da;border-radius:14px;background:#fff;font:inherit;color:#3a1230}
+.b{width:100%;margin-top:14px;padding:16px;border:0;border-radius:16px;color:#fff;background:linear-gradient(135deg,#d81b72,#ff7a59);font:600 16px Inter,sans-serif;cursor:pointer}
+.lk{background:none;border:0;color:var(--mut);font:600 13px Inter,sans-serif;cursor:pointer;margin-bottom:6px}
+#sh{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:#000b;z-index:50;padding:16px}
+#sh.on{display:flex}#sh .c{width:min(100%,400px)}
+.dt{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px}
+.dt button{width:26px;height:26px;border-radius:50%;border:1.5px solid #e0407f;background:none;color:var(--fg);font:600 11px Inter,sans-serif;cursor:pointer}.dt .on{background:#e0407f;color:#fff}
+.th{display:flex;gap:10px;justify-content:center;margin:6px 0 12px}
+.th button{width:140px;padding:8px;border-radius:12px;border:1.5px solid #4a2a46;background:#12081a;color:#ddd;font:600 12px Inter,sans-serif;cursor:pointer}
+.th button small{display:block;font-weight:400;color:#a888a0}.th .on{border-color:#e0407f;background:#2a0f20}.th .on b{color:#ff8fc0}
+/* phone */
+.ph{width:260px;height:540px;margin:8px auto 14px;border:3px solid #ff9ec2;border-radius:38px;position:relative;overflow:hidden;background:#ffd6e6}
+.ph:before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:92px;height:22px;background:#ff9ec2;border-radius:0 0 14px 14px;z-index:9}
+#s{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:44px 16px 24px;text-align:center;color:#8a0f3c;background:linear-gradient(#ffe9a8,#ffb3cf 60%,#ff9ec2);transition:background .8s}
+#s.top{justify-content:flex-start}#s.dk{background:#4a2c22;color:#fff}
+.cl{border-color:#8f6bd6}.cl:before{background:#8f6bd6}.cl #s{background:radial-gradient(circle at 50% 30%,#2e1a5a,#07040a)!important;color:#f5e6b8}.cl .big{color:#f5e6b8}
+.hand{font:700 30px/1.05 Caveat,cursive;margin:0}.tt{font:400 15px 'DM Serif Display',Georgia,serif;margin:0}
+.big{font:400 50px/1 'DM Serif Display',Georgia,serif;color:#c01560}
+.duo{font-size:50px;line-height:1.1}.yn{display:flex;gap:10px}
+.pb{border:0;border-radius:10px;padding:9px 18px;font:700 12px Inter,sans-serif;background:#b01a67;color:#fff;cursor:pointer}.pb.w2{background:#fff;color:#3a1230}
+.nx{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:9;animation:in .4s}
+.cf{position:absolute;top:-12px;width:8px;height:10px;z-index:8;pointer-events:none;animation:fall 3s ease-in forwards}
+@keyframes fall{to{transform:translateY(560px) rotate(560deg);opacity:.2}}
+@keyframes in{from{opacity:0;transform:scale(.7)}}
+@keyframes fl{50%{transform:translateY(-7px)}}
+@keyframes fk{to{transform:scale(1.15,.9)}}
+.ct{position:absolute;top:30px;right:14px;font:600 8px Inter,sans-serif;background:#fff;color:#555;padding:2px 5px;border-radius:5px;z-index:9}
+.bg{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;margin-top:6px}
+.bl{border:0;background:none;font-size:54px;height:78px;cursor:pointer;animation:fl 3s ease-in-out infinite}.bl:nth-child(2){animation-delay:.5s}.bl:nth-child(3){animation-delay:1s}
+.wd{font:600 24px/78px Caveat,cursive;color:#2a0f20;animation:in .5s;height:78px}
+.sky{position:relative;width:100%;height:290px}
+.st{position:absolute;border:0;background:none;font-size:32px;cursor:pointer;transform:translate(-50%,-50%);animation:tw 2s infinite alternate}
+.st.on{animation:none;filter:drop-shadow(0 0 8px #ff9a00)}@keyframes tw{to{transform:translate(-50%,-50%) scale(1.2);opacity:.6}}
+.sky svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.rs{min-height:48px;font:italic 16px/1.2 'DM Serif Display',Georgia,serif;color:#5a0a2c;animation:in .4s}
+.fc{display:flex;flex-direction:column;gap:12px;width:100%}
+.cd{perspective:600px;height:92px;cursor:pointer}.ci{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}.cd.f .ci{transform:rotateY(180deg)}
+.cd div{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:10px}
+.fr{background:linear-gradient(135deg,#ff7a59,#d81b72);color:#fff;font:700 17px Caveat,cursive}.bk{background:#fff;color:#3a1230;transform:rotateY(180deg);font:600 13px/1.3 Inter,sans-serif}
+.cs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-width:210px}
+.cdl{position:relative;border:0;background:none;font-size:34px;padding:16px 0 0;width:44px;cursor:pointer;filter:grayscale(.7)}
+.cdl.on{filter:none}.cdl i{display:none;position:absolute;top:2px;left:50%;margin-left:-5px;width:10px;height:16px;background:radial-gradient(#fff6b0,#ff9a00);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:fk .3s infinite alternate}.cdl.on i{display:block}
+.ck{position:relative;width:110px;height:108px}.ck i{position:absolute;display:block}
+.kp{bottom:0;left:0;width:110px;height:44px;background:#3a1a14;border-radius:10px 10px 18px 18px}
+.km{bottom:38px;left:5px;width:100px;height:24px;background:#fff3e3;border-radius:14px}
+.kd{bottom:60px;left:50%;margin-left:-3px;width:6px;height:26px;background:#ffd0e0;border:1px solid #c33}
+.fl{bottom:86px;left:50%;margin-left:-5px;width:10px;height:18px;background:radial-gradient(#fff6b0,#ffa030);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:fk .3s infinite alternate}
+.wish{font:italic 400 20px/1.2 'DM Serif Display',Georgia,serif;margin:0;animation:in .8s}
+.bb{position:absolute;background:#fff;color:#3a1230;border-radius:12px;padding:5px 8px;font:600 9px Inter,sans-serif;max-width:92px;animation:in .5s both;box-shadow:0 2px 6px #0002}
+.fw{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font-size:80px;animation:in .6s}
+.tr{position:absolute;bottom:58px;left:0;right:0;display:flex;justify-content:space-between;padding:0 22px;font-size:44px;animation:in .6s}
+.sc{position:relative;width:200px;height:110px;border-radius:12px;background:#fff;color:#b01a67;display:flex;align-items:center;justify-content:center;font:700 22px/1.1 Caveat,cursive;padding:10px}
+.sc canvas{position:absolute;inset:0;border-radius:12px;touch-action:none}
+.env{border:0;background:none;font-size:76px;cursor:pointer;animation:fl 2.5s ease-in-out infinite}
+.pw{position:relative;width:100%}
+.pp{background:#fffaf0;border:2px solid #f1d9a8;border-radius:12px;padding:16px 12px 26px;width:100%;height:350px;overflow:auto;font:500 15px/1.25 Caveat,cursive;color:#2a1a10}.pp p{margin:0 0 8px;animation:in .4s}
+.hb{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;background:#b01a67;color:#fff;font:11px/22px Inter,sans-serif;font-style:normal;text-align:center}
+.fe{position:absolute;bottom:6px;right:8px;font-size:22px}
+.gf{font-size:66px;border:0;background:none;cursor:pointer}
+.bd{position:absolute;top:0;right:-8px;width:20px;height:20px;border-radius:50%;background:#e0245e;color:#fff;font:700 11px/20px Inter,sans-serif;text-align:center}
+.gc{position:relative;background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 6px 18px #d81b7233;animation:in .5s}
+.hbd{font:700 18px Inter,sans-serif;color:#ff5fa8}
+.bln{position:absolute;bottom:-60px;font-size:40px;animation:up 6s linear forwards;pointer-events:none}@keyframes up{to{transform:translateY(-640px)}}
+.qc{background:#ffe9f1;border-radius:14px;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 6px 18px #d81b7233}
+#tt{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:#2a0f20;color:#fff;padding:10px 16px;border-radius:12px;font-size:13px;opacity:0;transition:.3s;z-index:99;pointer-events:none}#tt.on{opacity:1;transform:translate(-50%,0)}
+small{font-size:10px}
+</style></head>
+<body><div class="w">
+<p class="brand">Birthday Queen 👑</p>
+<div class="ph" id="ph"><div id="s"></div></div>
+<div class="dt" id="dt"></div>
+<div class="th"><button id="t1" class="on"><b>♥ ♡ ❤️</b><br>Cute &amp; Sweet<small>Playful &amp; Pink</small></button><button id="t2"><b>✨ 💜 ✨</b><br>Classic<small>Magical &amp; Cinematic</small></button></div>
+<button class="b" id="get" style="max-width:300px;display:block;margin:0 auto">Send this card 💌</button>
+</div>
+
+<div id="sh"><div class="c"><h2 class="sf">Your card is ready 🎉</h2><p class="s">Send it as a link, QR code or video.</p>
+ <input id="lkx" readonly><button class="b" id="cp">Copy link</button><p class="s" style="margin-top:12px;font-size:12px">Demo only: this link isn’t live.</p><button class="lk" id="sx" style="width:100%">Close</button></div></div>
+<div id="tt"></div>
+
+<script>
+/* ===== DEFAULT INFORMATION: edit here ===== */
+const CONFIG={
+  name:"Bubbly",
+  dob:"2005-11-03",               /* YYYY-MM-DD */
+  memories:["Our first meet up","Our endless fight","Every time you cheered me on"],
+  cake:"Galaxy Classic",
+  bond:"Sweet, Loyal, My rock",
+  friend:"🐰",                     /* 🐰 🐱 🧸 */
+  letter:""                        /* leave empty to use the default letter */
+};
+/* ========================================== */
+const $=q=>document.querySelector(q),esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const b0=new Date(CONFIG.dob),now=new Date();
+const S={pa:CONFIG.name,days:Math.max(0,Math.floor((now-b0)/864e5)),
+ age:now.getFullYear()-b0.getFullYear()-((now.getMonth()<b0.getMonth()||(now.getMonth()==b0.getMonth()&&now.getDate()<b0.getDate()))?1:0),
+ mem:CONFIG.memories,bond:CONFIG.bond,friend:CONFIG.friend,letter:CONFIG.letter};
+const N=()=>esc(S.pa),ord=n=>n+(["th","st","nd","rd"][(n%10<4&&(n%100<11||n%100>13))?n%10:0]);
+const letter=()=>S.letter?S.letter.split("\n").filter(Boolean):[`Dear ${S.pa},`,"Happy Birthday to someone truly special! 🎂",`You are ${S.bond}, and I’m so grateful to have you in my life.`,`You’ve been spreading joy for ${S.days.toLocaleString()} days, and every moment with you is precious.`,"On your special day, I wish you all the happiness, love, and joy that you deserve. May this year bring you countless beautiful moments and wonderful memories.","Here’s to celebrating you today and always! 🎉","With lots of love 💖"];
+function toast(t){const e=$("#tt");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("on"),2400)}
+
+/* engine */
+let T=[],cur=0,blown=0;const tm=(f,ms)=>T.push(setTimeout(f,ms)),s=()=>$("#s"),nxt=()=>go(cur+1);
+function conf(n=40){for(let i=0;i<n;i++){const c=document.createElement("i");c.className="cf";c.style.cssText=`left:${Math.random()*100}%;background:hsl(${Math.random()*360} 85% 60%);animation-delay:${Math.random()*.8}s;animation-duration:${2+Math.random()*1.5}s`;$("#ph").append(c);setTimeout(()=>c.remove(),4500)}}
+function nx(f,t="Continue ›"){const b=document.createElement("button");b.className="pb nx";b.textContent=t;b.onclick=f;s().append(b)}
+async function mic(done){try{const st=await navigator.mediaDevices.getUserMedia({audio:true}),c=new AudioContext(),a=c.createAnalyser();c.createMediaStreamSource(st).connect(a);const b=new Uint8Array(a.fftSize);const f=()=>{if(cur!=6||blown){st.getTracks().forEach(t=>t.stop());return}a.getByteTimeDomainData(b);let m=0;b.forEach(v=>m=Math.max(m,Math.abs(v-128)));m>60?(st.getTracks().forEach(t=>t.stop()),done()):requestAnimationFrame(f)};f()}catch(e){toast("Mic unavailable: tap the cake instead")}}
+const R=["Your laugh lights up every room","You’re endlessly kind","Your crazy ideas make life fun","Your energy is contagious","You make everyone feel special"];
+const P=[
+/* 1 greeting yes/no */
+e=>{e.innerHTML=`<h1 class="hand" style="font-size:34px">Happy Birthday,<br>${N()}</h1><div class="duo">🎊🎈🎊<br>🐻🎂🐼</div><p class="tt">Are you excited for what’s next?</p><div class="yn"><button class="pb" id="y">Yes</button><button class="pb w2" id="n">No</button></div>`;conf();
+ const n=$("#n"),run=()=>n.style.cssText=`position:absolute;left:${10+Math.random()*60}%;top:${25+Math.random()*60}%`;n.onpointerenter=run;n.onclick=run;$("#y").onclick=nxt},
+/* 2 counter */
+e=>{e.innerHTML=`<p class="hand">Happy Birthday,<br>${N()} 🎂</p><div class="big" id="n">0</div><p class="tt">days of being awesome${S.age?`<br>(that’s ${S.age} amazing years!)`:""}</p><button class="pb" id="b">Let’s celebrate 🎉</button>`;conf(30);
+ let k=0;const iv=setInterval(()=>{k+=Math.max(1,Math.ceil(S.days/40));if(k>=S.days){k=S.days;clearInterval(iv)}$("#n").textContent=k.toLocaleString()},40);T.push(iv);$("#b").onclick=nxt},
+/* 3 balloons */
+e=>{let c=0;const W=["You","are","so","special"],H=["200deg","-15deg","110deg","270deg"];
+ e.innerHTML=`<small class="ct">0/4 POPPED</small><p class="tt" style="font-weight:700;font-size:13px">Pop all 4 balloons</p><div class="bg">${W.map((w,i)=>`<button class="bl" style="filter:hue-rotate(${H[i]})" data-w="${w}">🎈</button>`).join("")}</div>`;
+ e.querySelectorAll(".bl").forEach(b=>b.onclick=()=>{const w=document.createElement("span");w.className="wd";w.textContent=b.dataset.w;b.replaceWith(w);conf(14);e.querySelector(".ct").textContent=++c+"/4 POPPED";if(c==4)tm(nxt,2200)})},
+/* 4 wish stars */
+e=>{const X=[[20,72],[50,25],[80,72],[28,18],[74,30]];let c=0,last=null;
+ e.innerHTML=`<p class="tt">Tap each star to see why you’re special</p><div class="sky"><svg id="sv" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>${X.map(([x,y],i)=>`<button class="st" style="left:${x}%;top:${y}%" data-i="${i}">⭐</button>`).join("")}</div><div class="rs" id="rs"></div>`;
+ e.querySelectorAll(".st").forEach(b=>b.onclick=()=>{if(b.classList.contains("on"))return;b.classList.add("on");const i=+b.dataset.i;$("#rs").textContent=R[c];
+  if(last!=null)$("#sv").insertAdjacentHTML("beforeend",`<line x1="${X[last][0]}" y1="${X[last][1]}" x2="${X[i][0]}" y2="${X[i][1]}" stroke="#d81b72" stroke-width="1.5" vector-effect="non-scaling-stroke"/>`);last=i;
+  if(++c==5){conf(30);tm(()=>nx(nxt),900)}})},
+/* 5 memories */
+e=>{let c=0;const I=["📸","🎶","💌"];e.innerHTML=`<p class="tt">Our memories, flip each one</p><div class="fc">${S.mem.map((m,i)=>`<div class="cd"><div class="ci"><div class="fr">${I[i]} Tap to remember</div><div class="bk">${esc(m)}</div></div></div>`).join("")}</div>`;
+ e.querySelectorAll(".cd").forEach(d=>d.onclick=()=>{if(d.classList.contains("f"))return;d.classList.add("f");if(++c==3)tm(()=>nx(nxt),900)})},
+/* 6 light candles */
+e=>{const n=Math.min(Math.max(S.age,1),9);let lit=0;e.innerHTML=`<p class="tt" id="h">Light all ${n} candle${n>1?"s":""}</p><div class="cs">${Array.from({length:n},()=>`<button class="cdl">🕯️<i></i></button>`).join("")}</div><div style="min-height:40px" id="a"></div>`;
+ e.querySelectorAll(".cdl").forEach(b=>b.onclick=()=>{if(b.classList.contains("on"))return;b.classList.add("on");if(++lit==n){$("#h").textContent="Now make a wish…";$("#a").innerHTML=`<button class="pb" id="bw">🌬️ Blow them out</button>`;
+  $("#bw").onclick=()=>{e.querySelectorAll(".cdl").forEach(x=>x.classList.remove("on"));$("#h").textContent="Your wish is on its way ✨";$("#a").innerHTML="";conf(50);tm(()=>nx(nxt),1200)}}})},
+/* 7 blow the candle */
+e=>{e.innerHTML=`<p class="tt" style="font-weight:700">Blow the candle</p><div class="ck" id="ck"><i class="fl"></i><i class="kd"></i><i class="km"></i><i class="kp"></i></div><button class="pb w2" id="mb">🎤 Blow into the mic</button><small>(or tap the cake)</small>`;
+ const blow=()=>{if(blown)return;blown=1;e.classList.add("dk");e.querySelector(".fl").style.display="none";$("#mb").remove();e.querySelector("small").remove();const w=document.createElement("p");w.className="wish";w.innerHTML="Close your eyes<br>&amp; make a wish";e.append(w);conf(50);tm(nxt,3800)};
+ $("#ck").onclick=blow;$("#mb").onclick=()=>mic(blow)},
+/* 8 rose bouquet */
+e=>{e.innerHTML=`<p class="tt" style="font-weight:700;color:#8a0f3c;margin-top:6px">Your Rose Bouquet 🌹</p>`;
+ [["Forever yours 🤍","8%","13%"],["You make my world beautiful","58%","13%"],["You are my sunshine ☀️","6%","30%"],[`Happy Birthday, ${N()} 💗`,"58%","30%"],["I’m lucky to have you","6%","66%"],["My favorite person 💕","58%","66%"]].forEach(([t,l,tp],i)=>tm(()=>{const b=document.createElement("div");b.className="bb";b.style.cssText=`left:${l};top:${tp}`;b.textContent=t;e.append(b)},500+i*650));
+ tm(()=>e.insertAdjacentHTML("beforeend",`<div class="fw">💐</div><div class="tr"><span>🌳</span><span>🌳</span></div>`),4600);tm(()=>nx(nxt),5400)},
+/* 9 scratch card */
+e=>{e.innerHTML=`<p class="tt">Scratch to reveal your surprise</p><div class="sc">You deserve the whole world today 🌍💖<canvas id="cv" width="200" height="110"></canvas></div>`;
+ const cv=$("#cv"),x=cv.getContext("2d"),g=x.createLinearGradient(0,0,200,110);g.addColorStop(0,"#ff7a59");g.addColorStop(1,"#d81b72");x.fillStyle=g;x.fillRect(0,0,200,110);x.fillStyle="#fff";x.font="700 14px Inter,sans-serif";x.textAlign="center";x.fillText("🎁 SCRATCH HERE 🎁",100,60);
+ let dn=0,k=0,ok=0;const sc=ev=>{if(!dn||ok)return;const r=cv.getBoundingClientRect(),a=(ev.clientX-r.left)*200/r.width,b=(ev.clientY-r.top)*110/r.height;x.globalCompositeOperation="destination-out";x.beginPath();x.arc(a,b,14,0,7);x.fill();
+  if(++k%8==0){const d=x.getImageData(0,0,200,110).data;let t=0;for(let i=3;i<d.length;i+=16)d[i]==0&&t++;if(t>d.length/16*.45){ok=1;cv.style.transition="opacity .6s";cv.style.opacity=0;conf(40);tm(()=>nx(nxt),800)}}};
+ cv.onpointerdown=ev=>{dn=1;cv.setPointerCapture(ev.pointerId);sc(ev)};cv.onpointermove=sc;cv.onpointerup=()=>dn=0},
+/* 10 envelope */
+e=>{e.innerHTML=`<p class="tt" style="font-weight:700">A Message From My Heart</p><button class="env" id="ev">✉️</button><small>Tap to open</small>`;$("#ev").onclick=()=>{$("#ev").textContent="💌";tm(nxt,900)}},
+/* 11 letter */
+e=>{e.innerHTML=`<p class="tt" style="font-weight:700;color:#8a0f3c;margin-top:6px">A Message From My Heart ❤️</p><div class="pw"><div class="pp" id="pp"></div><i class="hb">♥</i><span class="fe">${S.friend}</span></div>`;
+ const L=letter(),pp=$("#pp");L.forEach((t,i)=>tm(()=>{const p=document.createElement("p");p.textContent=t;pp.append(p);pp.scrollTop=pp.scrollHeight},400+i*800));tm(()=>nx(nxt),600+L.length*800)},
+/* 12 gift */
+e=>{let n=2;e.innerHTML=`<p class="hand">One Last Thing…</p><small style="font-weight:700">Tap the gift</small><div style="position:relative"><button class="gf" id="gf">🎁</button><b class="bd">2</b></div>`;
+ $("#gf").onclick=()=>{n--;const b=$(".bd");b&&(b.textContent=n);$("#gf").animate([{transform:"rotate(-12deg)"},{transform:"rotate(12deg)"},{transform:"none"}],300);
+  if(!n){conf(50);e.innerHTML=`<div class="gc"><div class="hbd">HBD</div><div style="font-size:42px">${S.friend}🎁🐻</div><i class="hb">♥</i></div><p class="hand" style="font-size:20px">Lots of love for you ❤️</p><small style="font-weight:700">Once again, Happy Birthday ${N()}!</small>`;tm(()=>nx(nxt),1200)}}},
+/* 13 finale */
+e=>{e.innerHTML=`<div style="font-size:64px">🎂</div><p class="hand" style="font-size:34px">Happy ${S.age?ord(S.age)+" ":""}Birthday,<br>${N()}!</p><p class="tt">With lots of love ❤️</p><div class="yn"><button class="pb" id="rp">↺ Watch again</button><button class="pb w2" id="qr">Share as QR ›</button></div>`;
+ conf(70);[1,2,3].forEach(i=>tm(()=>conf(40),i*1800));
+ for(let i=0;i<10;i++)tm(()=>{const b=document.createElement("span");b.className="bln";b.textContent="🎈";b.style.left=Math.random()*90+"%";b.style.filter=`hue-rotate(${Math.random()*360}deg)`;$("#ph").append(b);setTimeout(()=>b.remove(),6200)},i*500);
+ $("#rp").onclick=()=>go(0);$("#qr").onclick=nxt},
+/* 14 QR heart */
+e=>{let r=7,q="";const R2=()=>(r=r*16807%2147483647)/2147483647,fd=(x,y)=>`<rect x="${x*2+1}" y="${y*2+1}" width="10" height="10" fill="none" stroke="#2a0f20" stroke-width="2"/><rect x="${x*2+4}" y="${y*2+4}" width="4" height="4"/>`;
+ for(let y=0;y<17;y++)for(let x=0;x<17;x++){if((x<6&&y<6)||(x>10&&y<6)||(x<6&&y>10))continue;if(R2()>.5)q+=`<rect x="${x*2}" y="${y*2}" width="2" height="2"/>`}
+ e.innerHTML=`<div class="qc"><b class="tt">${N()}</b><svg viewBox="0 0 100 100" width="170"><path fill="#d3172f" d="M50 92C8 62 0 28 24 14c14-8 26 2 26 10 0-8 12-18 26-10 24 14 16 48-26 78z"/><rect x="33" y="28" width="34" height="34" rx="2" fill="#fff"/><svg x="33" y="28" width="34" height="34" viewBox="0 0 34 34" fill="#2a0f20">${q}${fd(0,0)}${fd(11,0)}${fd(0,11)}</svg></svg><small>Tap to open</small></div>`;
+ $(".qc").onclick=()=>{$(".qc small").textContent="⏳ Opening…";tm(()=>go(0),1400)}}
+];
+const NM=["Greeting","Counter","Balloons","Wish stars","Memories","Light candles","Blow candle","Rose bouquet","Scratch card","Envelope","Letter","Gift","Finale","QR heart"],TOP=[7,10];
+function go(i){T.forEach(clearTimeout);T.forEach(clearInterval);T=[];cur=i;blown=0;const e=s();e.className=TOP.includes(i)?"top":"";e.innerHTML="";P[i](e);document.querySelectorAll("#dt button").forEach((b,k)=>b.classList.toggle("on",k==i))}
+$("#dt").innerHTML=NM.map((n,i)=>`<button title="${n}" aria-label="${n}">${i+1}</button>`).join("");
+$("#dt").onclick=e=>{const k=[...$("#dt").children].indexOf(e.target);k>=0&&go(k)};
+const th=c=>{$("#ph").classList.toggle("cl",c);$("#t1").classList.toggle("on",!c);$("#t2").classList.toggle("on",c)};
+$("#t1").onclick=()=>th(0);$("#t2").onclick=()=>th(1);
+$("#get").onclick=()=>{$("#lkx").value="birthday.demo/"+S.pa.toLowerCase().replace(/[^a-z0-9]+/g,"-");$("#sh").classList.add("on")};
+$("#sx").onclick=()=>$("#sh").classList.remove("on");
+$("#cp").onclick=()=>{navigator.clipboard?.writeText($("#lkx").value).then(()=>toast("Link copied"),()=>toast("Copy not available here"))};
+go(0);
+</script></body></html>
